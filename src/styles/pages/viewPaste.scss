@@ -1,0 +1,26 @@
+.view-paste {
+  .source {
+    ol {
+      border: 1px solid rgba(0, 0, 0, 0.7);
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      //   border-radius: 10px;
+      background: #ededed;
+
+      li {
+        //   background: white;
+        border-left: 1px solid rgba(0, 0, 0, 0.7);
+        padding: 0 8px;
+        background: #fcfcfc;
+
+        &::marker {
+          color: rgba(0, 0, 0, 0.7);
+        }
+
+        div {
+            white-space: pre-wrap;
+        }
+      }
+    }
+  }
+}

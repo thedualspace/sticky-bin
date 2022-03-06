@@ -1,16 +1,24 @@
 body {
-    background: hsl(0, 0, 93%);
-    div {
-        display: flex;
-    }
+  background: hsl(0, 0, 93%);
+  div {
+    display: flex;
+  }
 }
 
 .App {
-    margin: 0 1rem;
-    text-align: center;
+  margin: 0 1rem;
+  text-align: center;
+  flex: 1 1 100%;
+  align-items: center;
+
+  .page {
     flex-direction: column;
-    flex: 1 1 100%;
     align-items: center;
+    flex: 1 1 auto;
+
+    .title-container {
+      text-decoration: none;
+      color: unset;
+    }
+  }
 }
-
-

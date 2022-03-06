@@ -1,21 +1,25 @@
-//Components
-import { StickyBin } from "./components/stickyBin";
+import { Route, Routes, Navigate, BrowserRouter as Router } from "react-router-dom";
 
-//Styles
+// Pages
+import CreatePaste from "./pages/createPaste";
+import ViewPaste from "./pages/viewPaste";
+
+// Styles
 import "./styles/App.scss";
 
 function App() {
     return (
         <div className="App">
-            <div className="title-container">
-                <h1>
-                    Sticky Bin
-                    <span role="img" aria-label="bin emoji">
-                        🗑️
-                    </span>
-                </h1>
-            </div>
-            <StickyBin />
+            <Router>
+                <Routes>
+                    <Route path="/" element={<CreatePaste />} />
+                    <Route path="/paste/:pasteUrl" element={<ViewPaste />} />
+                    <Route
+                        path="*"
+                        element={<Navigate to="/" />}
+                    />
+                </Routes>
+            </Router>
         </div>
     );
 }
