@@ -33,7 +33,7 @@ export const StickyBin = () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({content})
         };
-        let response = await fetch("/paste", requestOptions);
+        let response = await fetch("/api/paste", requestOptions);
         const { paste: {URL} } = await response.json();
         return URL
     }
