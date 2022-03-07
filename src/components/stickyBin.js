@@ -10,7 +10,7 @@ export const StickyBin = () => {
     const [loading, setLoading] = useState(false);
     const [pasteURL, setPasteURL] = useState("");
 
-    //Allows autosize to ensure the input box resizes with the input length
+    //Allows autosize to ensure the input box resizes vertically with the input length
     useEffect(() => {
         autosize(document.querySelectorAll("textarea"));
     }, [input])
@@ -53,6 +53,7 @@ export const StickyBin = () => {
                     placeholder="Enter some content..."
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
+                    disabled={loading}
                 />
                 <button type="submit">Submit</button>
                 </form>

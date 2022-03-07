@@ -1,4 +1,8 @@
 .view-paste {
+  .error {
+    flex-direction: column;
+  }
+
   .source {
     ol {
       border: 1px solid rgba(0, 0, 0, 0.7);
@@ -18,7 +22,7 @@
         }
 
         div {
-            white-space: pre-wrap;
+          white-space: pre-wrap;
         }
       }
     }

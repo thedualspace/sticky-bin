@@ -13,10 +13,14 @@ const ViewPaste = () => {
         const fetchContent = async () => {
             // If content is not returned from the server, content and lines are undefined.
             // We handle this error at render to display feedback to the user
-            let response = await fetch(`/api/${pasteUrl}`);
-            const { content } = await response.json();
-            const lines = content?.split("\n");
-            setContent(lines)
+            try {
+                let response = await fetch(`/api/paste/${pasteUrl}`);
+                const { content } = await response.json();
+                const lines = content?.split("\n");
+                setContent(lines)
+            } catch (e) {
+                console.log(e.message)
+            }
             setLoading(false)
         }
 
